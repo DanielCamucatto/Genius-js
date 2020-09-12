@@ -1,0 +1,169 @@
+/* configuracoes iniciais */
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin:0;
+}
+main{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    padding: 10px;
+}
+/* configuracoes gerais */
+.perfect-center{
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+}
+.night-mode-transition{
+    transition: 1s;
+}
+/* container */
+.container{
+    height: 100vh;
+    width: 100vw;
+}
+/* configurando jogo */
+.game{
+    align-items: center;
+    background: #282e3a;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 50vw;
+    width: 50vw;
+    justify-content: space-around;
+    margin: auto;
+    padding: 1.5%;
+    position: relative;
+}
+.clickable{
+    height: 45%;
+    width: 45%;
+    opacity: 0.25;
+    transition:0.75s;
+}
+.top-left.round-corner{
+    border-radius: 100% 5px 5px 5px;
+}
+.top-right.round-corner{
+    border-radius:5px 100% 5px 5px;
+}
+.bottom-left.round-corner{
+    border-radius:5px 5px 5px 100% ;
+}
+.bottom-right.round-corner{
+    border-radius:5px 5px 100% 5px;
+}
+.control-container{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+}
+.control{
+    background-color: #282e3a;
+    border-radius:100px;
+    height: 25%;
+    width: 25%;
+    margin: 10px 0;
+    cursor: pointer;
+    position: relative;
+}
+.control .background{
+    background-color: green;
+    border-radius: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+     box-sizing: border-box;
+     height: 80%;
+     width: 80%;
+    pointer-events: initial;
+    position: absolute;
+}
+.control p{
+    pointer-events: none;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+.hover{
+    opacity: 0.5;
+}
+.active{
+    opacity: 1;
+}
+/* Configurando o HUD */
+.hud{
+    display: flex;
+    justify-content: center;
+    width: 50vw;
+    margin: 30px auto;
+}
+.hud div{
+    background-color: rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    margin: 0 1vw;
+    padding: 15px;
+}
+.score, .high-score{
+    margin: 0 auto;
+    text-align: center;
+}
+/* colorindo os bottons */
+#red{
+    background-color:red;
+}
+#yellow{
+    background-color: yellow;
+}
+#green{
+    background-color:green;
+}
+#blue{
+    background-color:blue;
+}
+.control p,hud div p{
+    font-size:0.55em;
+}
+/* configurando o rodape */
+footer{
+    position:absolute;
+    bottom: 0;
+}
+footer p, footer a{
+    text-align: center;
+    width: 100vw;
+}
+/* night-mode */
+.night-mode-button{
+    border-radius: 25px 0 0 25px;
+    font-size: 50px;
+    cursor: pointer;
+    padding: 10px 50px 10px 10px;
+    position: absolute;
+    right: 0;
+    top:70%;
+}
+.container.night-mode{
+    background-color: #2c3147
+}
+.night-mode .night-mode-button {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.night-mode .hud div p,
+.night-mode footer p,
+.night-mode footer a {
+    color: rgba(255, 255, 255, 0.5);
+}
