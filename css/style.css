@@ -167,3 +167,51 @@ footer p, footer a{
 .night-mode footer a {
     color: rgba(255, 255, 255, 0.5);
 }
+/* day mode */
+.day-mode .night-mode-button{
+    background-color: rgba(255,255,255,0.1);
+    color: rgba(255, 255, 255, 0.15);
+}
+.day-mode .hub div p,
+.day-mode footer p,
+.day-mode footer a{
+    color: rgba(0,0,0,0.5);
+}
+/* configuracao media queries */
+
+@media(min-width: 768px){
+    .control p, .hub div p{
+        font-size: 0.75rem
+    }
+}
+@media(min-width:992px){
+    main{
+        align-items: center;
+        display: flex;
+        height: 90vh;
+        justify-content: center;
+    }
+    .game{
+        height: 40vw;
+        width: 40vw;
+        margin: 0 35px 0 0;
+    }
+    .control p, .hub div p{
+        font-size:0.9rem;
+    }
+    .hub{
+        align-items: center;
+        flex-direction: column;
+        margin: 0 0 0 35px;
+        justify-content: space-around;
+        width: 250px;
+    }
+    .hub div{
+        margin: 60px 0;
+    }
+}
+@media(min-width: 1200px){
+    .control p, .hub div p{
+        font-size: 1.1rem;
+    }
+}
